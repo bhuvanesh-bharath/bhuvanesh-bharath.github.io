@@ -3,441 +3,235 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BHUVANESH BHARATH >> Portfolio</title>
+    <title>Bhuvanesh Bharath | Portfolio</title>
+
     <style>
-        /* Cyberpunk/Dark Tech Theme */
         :root {
-            --primary: #0ff0fc;
-            --secondary: #ff2a6d;
-            --dark: #050a0e;
-            --darker: #010101;
-            --dark-blue: #1a1a2e;
-            --text: #d1f7ff;
-            --terminal-text: #15f215;
+            --bg-dark: #0f172a;
+            --bg-light: #111827;
+            --card: #1f2933;
+            --accent: #38bdf8;
+            --text-primary: #e5e7eb;
+            --text-secondary: #9ca3af;
+            --border: #334155;
         }
-        
-        body {
-            font-family: 'Courier New', monospace;
-            background-color: var(--darker);
-            color: var(--text);
+
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, sans-serif;
+            background: linear-gradient(180deg, var(--bg-dark), var(--bg-light));
+            color: var(--text-primary);
             line-height: 1.6;
-            overflow-x: hidden;
-            background-image: 
-                radial-gradient(circle at 10% 20%, rgba(5, 10, 14, 0.8) 0%, transparent 20%),
-                radial-gradient(circle at 90% 80%, rgba(255, 42, 109, 0.1) 0%, transparent 20%);
         }
 
-        /* Terminal Header */
-        .terminal {
-            background-color: rgba(5, 10, 14, 0.9);
-            border: 1px solid var(--primary);
-            border-radius: 8px 8px 0 0;
-            padding: 15px;
-            margin: 20px auto 0;
-            max-width: 900px;
-            box-shadow: 0 0 15px rgba(0, 255, 242, 0.3);
-            position: relative;
+        header {
+            max-width: 1000px;
+            margin: 60px auto 40px;
+            padding: 0 20px;
         }
 
-        .terminal-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
         }
 
-        .terminal-btn {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            margin-right: 6px;
+        header p {
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin-top: 10px;
+            font-size: 1.05rem;
         }
 
-        .btn-red { background-color: #ff5f56; }
-        .btn-yellow { background-color: #ffbd2e; }
-        .btn-green { background-color: #27c93f; }
-
-        .terminal-title {
-            flex-grow: 1;
-            text-align: center;
-            color: var(--terminal-text);
-            text-shadow: 0 0 5px var(--terminal-text);
-            letter-spacing: 1px;
-        }
-
-        .terminal-body {
-            padding: 10px;
-        }
-
-        .command-line {
-            display: flex;
-            margin-bottom: 5px;
-        }
-
-        .prompt {
-            color: var(--secondary);
-            margin-right: 10px;
-        }
-
-        .command {
-            color: var(--terminal-text);
-            text-shadow: 0 0 5px var(--terminal-text);
-        }
-
-        .cursor {
-            display: inline-block;
-            width: 10px;
-            height: 20px;
-            background-color: var(--terminal-text);
-            animation: blink 1s infinite;
-            vertical-align: middle;
-            margin-left: 5px;
-        }
-
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
-        }
-
-        /* Navigation */
         nav {
-            display: flex;
-            justify-content: center;
-            padding: 15px;
-            background-color: rgba(26, 26, 46, 0.7);
-            margin: 0 auto;
-            max-width: 900px;
-            border-left: 1px solid var(--primary);
-            border-right: 1px solid var(--primary);
-            border-bottom: 1px solid var(--primary);
-            border-radius: 0 0 8px 8px;
+            margin-top: 25px;
         }
 
         nav a {
-            color: var(--text);
+            margin-right: 20px;
             text-decoration: none;
-            margin: 0 20px;
-            padding: 5px 10px;
-            position: relative;
-            font-weight: bold;
-            letter-spacing: 1px;
-            transition: all 0.3s;
+            color: var(--accent);
+            font-weight: 500;
         }
 
         nav a:hover {
-            color: var(--primary);
-        }
-
-        nav a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: 0;
-            left: 0;
-            background-color: var(--secondary);
-            transition: width 0.3s;
-        }
-
-        nav a:hover::after {
-            width: 100%;
-        }
-
-        /* Sections */
-        section {
-            background-color: rgba(26, 26, 46, 0.7);
-            border: 1px solid var(--primary);
-            border-radius: 8px;
-            padding: 25px;
-            margin: 30px auto;
-            max-width: 850px;
-            box-shadow: 0 0 20px rgba(0, 255, 242, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        section:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 25px rgba(0, 255, 242, 0.2);
-        }
-
-        h2 {
-            color: var(--primary);
-            margin-top: 0;
-            border-bottom: 1px solid var(--secondary);
-            padding-bottom: 10px;
-            display: inline-block;
-            text-shadow: 0 0 10px rgba(0, 255, 242, 0.5);
-        }
-
-        /* Projects */
-        .project {
-            background-color: rgba(5, 10, 14, 0.5);
-            border-left: 3px solid var(--secondary);
-            padding: 15px;
-            margin-bottom: 20px;
-            transition: all 0.3s;
-        }
-
-        .project:hover {
-            border-left: 3px solid var(--primary);
-            background-color: rgba(5, 10, 14, 0.7);
-        }
-
-        .project h3 {
-            color: var(--secondary);
-            margin-top: 0;
-        }
-
-        .project-links a {
-            color: var(--primary);
-            text-decoration: none;
-            margin-right: 15px;
-            font-size: 0.9em;
-            display: inline-block;
-            margin-top: 10px;
-        }
-
-        .project-links a:hover {
             text-decoration: underline;
         }
 
-        /* Skills */
-        .skills-container {
+        section {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 8px;
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .card p {
+            color: var(--text-secondary);
+        }
+
+        .skills {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
         }
 
         .skill {
-            background-color: rgba(0, 255, 242, 0.1);
-            border: 1px solid var(--primary);
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.9em;
-            transition: all 0.3s;
+            border: 1px solid var(--border);
+            padding: 6px 14px;
+            border-radius: 999px;
+            font-size: 0.9rem;
+            background-color: #020617;
         }
 
-        .skill:hover {
-            background-color: rgba(0, 255, 242, 0.3);
-            transform: scale(1.05);
-        }
-
-        /* Contact */
-        .contact-method {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-
-        .contact-method i {
-            width: 30px;
-            color: var(--secondary);
-            font-style: normal;
-            font-weight: bold;
-        }
-
-        .contact-method a {
-            color: var(--primary);
+        .contact a {
+            display: block;
+            color: var(--accent);
             text-decoration: none;
+            margin-bottom: 8px;
         }
 
-        .contact-method a:hover {
+        .contact a:hover {
             text-decoration: underline;
         }
 
-        /* Footer */
         footer {
             text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-            color: var(--text);
-            font-size: 0.9em;
-            border-top: 1px solid rgba(0, 255, 242, 0.2);
+            padding: 30px 20px;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border);
+            margin-top: 60px;
         }
 
-        /* Animations */
-        @keyframes glitch {
-            0% { text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75); }
-            14% { text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75); }
-            15% { text-shadow: -0.05em -0.025em 0 rgba(0, 255, 0, 0.75); }
-            49% { text-shadow: -0.05em -0.025em 0 rgba(0, 255, 0, 0.75); }
-            50% { text-shadow: 0.025em 0.05em 0 rgba(0, 0, 255, 0.75); }
-            99% { text-shadow: 0.025em 0.05em 0 rgba(0, 0, 255, 0.75); }
-            100% { text-shadow: -0.025em 0 0 rgba(255, 0, 255, 0.75); }
-        }
-
-        .glitch-effect {
-            animation: glitch 2s infinite;
-        }
-
-        /* Responsive */
         @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            nav a {
-                margin: 5px 0;
-            }
-            
-            .terminal {
-                margin: 10px;
-            }
-            
-            section {
-                margin: 20px 10px;
-                padding: 15px;
+            header h1 {
+                font-size: 2rem;
             }
         }
     </style>
 </head>
+
 <body>
-    <!-- Terminal Header -->
-    <div class="terminal">
-        <div class="terminal-header">
-            <div class="terminal-btn btn-red"></div>
-            <div class="terminal-btn btn-yellow"></div>
-            <div class="terminal-btn btn-green"></div>
-            <div class="terminal-title">BHUVANESH BHARATH@PORTFOLIO:~</div>
-        </div>
-        <div class="terminal-body">
-            <div class="command-line">
-                <span class="prompt">$</span>
-                <span class="command">whoami</span>
-                <span class="cursor"></span>
-            </div>
-            <div class="command-line">
-                <span class="prompt">></span>
-                <span class="command">B.Tech IT Student | CyberSecurity Enthusiast</span>
-            </div>
-            <div class="command-line">
-                <span class="prompt">$</span>
-                <span class="command">cat about.txt</span>
-            </div>
-            <div class="command-line">
-                <span class="prompt">></span>
-                <span class="command">Driven to uncover vulnerabilities, understand systems, and grow as a security researcher.</span>
-            </div>
-            <div class="command-line">
-                <span class="prompt">$</span>
-                <span class="command glitch-effect">_</span>
-            </div>
-        </div>
-    </div>
 
-    <!-- Navigation -->
+<header>
+    <h1>Bhuvanesh Bharath</h1>
+    <p>
+        B.Tech Information Technology student with a focused interest in cybersecurity and web application security.
+        Actively building hands-on experience through bug bounty hunting, CTFs, and practical vulnerability research.
+    </p>
+
     <nav>
-        <a href="#about">[About]</a>
-        <a href="#projects">[Current Focus]</a>
-        <a href="#skills">[Skills]</a>
-        <a href="#contact">[Contact]</a>
+        <a href="#about">About</a>
+        <a href="#focus">Current Focus</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
     </nav>
+</header>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>> about_me</h2>
-        <p>Hey there! I’m <span style="color: var(--secondary)">Bhuvanesh</span>, — a self-driven cyber enthusiast exploring the art of breaking and securing the web.
-</p>
-        <p>As a B.Tech IT student with a growing interest in bug bounty hunting and ethical hacking, I spend my time poking at websites, finding vulnerabilities, and sharpening my coding and Linux skills.</p>
-        <p>CTFs, terminal tweaks, and a passion for uncovering hidden flaws — that’s where you’ll usually find me.</p>
-    </section>
-
-    <!-- Projects Section -->
-<section id="projects">
-    <h2>> What I'm Working On</h2>
-    
-    <div class="project">
-        <h3>Bug Bounty Hunting</h3>
-        <p>Actively hunting for web application vulnerabilities such as SQL Injection, XSS, IDOR, SSRF, and more on platforms like HackerOne. Reported critical vulnerabilities on government websites.</p>
-    </div>
-
-    <div class="project">
-        <h3>CTF Challenges</h3>
-        <p>Participating in Capture The Flag (CTF) challenges to improve penetration testing skills. Solving various challenges related to cryptography, reverse engineering, and web application security.</p>
-    </div>
-
-    <div class="project">
-        <h3>Learning Progress</h3>
-        <p>Currently focused on mastering Python for penetration testing and web application security. Learning new tools and techniques to stay up-to-date in the cybersecurity field.</p>
+<section id="about">
+    <h2 class="section-title">About</h2>
+    <div class="card">
+        <p>
+            I am a B.Tech IT student with a strong interest in identifying and understanding real-world security
+            vulnerabilities. My learning approach is hands-on — testing applications, analyzing behavior, and
+            improving my technical depth through continuous practice.
+        </p>
+        <p style="margin-top: 10px;">
+            I am particularly interested in web application security, access control issues, and common exploitation
+            techniques, while steadily improving my Linux and scripting skills.
+        </p>
     </div>
 </section>
 
+<section id="focus">
+    <h2 class="section-title">Current Focus</h2>
 
-   <!-- Skills Section -->
+    <div class="card">
+        <h3>Bug Bounty & Vulnerability Research</h3>
+        <p>
+            Actively hunting for vulnerabilities such as SQL Injection, XSS, IDOR, and SSRF on real-world web
+            applications. Successfully reported valid security issues, including critical findings, on live systems.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Capture The Flag (CTF) Practice</h3>
+        <p>
+            Solving CTF challenges to strengthen fundamentals in web security, Linux, cryptography basics, and
+            problem-solving under constraints.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Technical Skill Development</h3>
+        <p>
+            Improving Python for automation and security testing while gaining deeper familiarity with commonly used
+            penetration testing tools and workflows.
+        </p>
+    </div>
+</section>
+
 <section id="skills">
-    <h2>> Skills</h2>
-    <div class="skills-container">
-        <div class="skill">Python</div>
-        <div class="skill">C</div>
-        <div class="skill">Penetration Testing</div>
-        <div class="skill">Web Application Security</div>
-        <div class="skill">SQL Injection</div>
-        <div class="skill">XSS</div>
-        <div class="skill">IDOR</div>
-        <div class="skill">SSRF</div>
-        <div class="skill">Burp Suite</div>
-        <div class="skill">Nmap</div>
-        <div class="skill">Linux</div>
-        <div class="skill">Kali Linux</div>
-        <div class="skill">Wireshark</div>
-        <div class="skill">Metasploit</div>
+    <h2 class="section-title">Skills</h2>
+    <div class="card">
+        <div class="skills">
+            <span class="skill">Web Application Security</span>
+            <span class="skill">Penetration Testing</span>
+            <span class="skill">SQL Injection</span>
+            <span class="skill">XSS</span>
+            <span class="skill">IDOR</span>
+            <span class="skill">SSRF</span>
+            <span class="skill">Python</span>
+            <span class="skill">C</span>
+            <span class="skill">Linux</span>
+            <span class="skill">Kali Linux</span>
+            <span class="skill">Burp Suite</span>
+            <span class="skill">Nmap</span>
+            <span class="skill">Wireshark</span>
+            <span class="skill">Metasploit</span>
+        </div>
     </div>
 </section>
 
-
-<!-- Contact Section -->
 <section id="contact">
-    <h2>> contact</h2>
-    <div class="contact-method">
-        Email: <a href="mailto:sidhubhuvanesh@gmail.com">sidhubhuvanesh@gmail.com</a>
+    <h2 class="section-title">Contact</h2>
+    <div class="card contact">
+        <a href="mailto:sidhubhuvanesh@gmail.com">📧 sidhubhuvanesh@gmail.com</a>
+        <a href="https://github.com/bhuvanesh-bharath/" target="_blank">💻 GitHub — bhuvanesh-bharath</a>
+        <a href="https://linkedin.com/in/bhuvanesh-bharath/" target="_blank">🔗 LinkedIn — Bhuvanesh Bharath</a>
     </div>
-    <div class="contact-method">
-        GitHub: <a href="https://github.com/bhuvanesh-bharath/" target="_blank">Bhuvanesh-Bharath</a>
-    </div>
-    <div class="contact-method">
-        LinkedIn: <a href="https://linkedin.com/in/bhuvanesh-bharath/" target="_blank">Bhuvanesh-Bharath</a>
-    </div>
-    <div class="contact-method">
-        Instagram: <a href="https://www.instagram.com/s1dhuuh/" target="_blank">@s1dhuuh</a>
-    </div>
-    
 </section>
 
+<footer>
+    © <span id="year"></span> Bhuvanesh Bharath. All rights reserved.
+</footer>
 
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
-    <footer>
-        <p>&copy; <span id="year"></span> Bhuvanesh Bharath. All rights reserved.</p>
-        <p>Last updated: <span id="update-date"></span></p>
-    </footer>
-
-    <script>
-        // Current year in footer
-        document.getElementById('year').textContent = new Date().getFullYear();
-        
-        // Last updated date
-        const options = { year: 'numeric', month: 'long', day: 'numeric' };
-        document.getElementById('update-date').textContent = new Date().toLocaleDateString('en-US', options);
-        
-        // Terminal typing effect
-        const commands = [
-            "help",
-            "contact --socials",
-            "projects --recent",
-            "skills --all",
-            "clear"
-        ];
-        
-        let currentCommand = 0;
-        const glitchElement = document.querySelector('.glitch-effect');
-        
-        function typeCommand() {
-            glitchElement.textContent = commands[currentCommand];
-            currentCommand = (currentCommand + 1) % commands.length;
-        }
-        
-        setInterval(typeCommand, 2000);
-    </script>
 </body>
 </html>
