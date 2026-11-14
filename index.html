@@ -1,237 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bhuvanesh Bharath | Portfolio</title>
-
-    <style>
-        :root {
-            --bg-dark: #0f172a;
-            --bg-light: #111827;
-            --card: #1f2933;
-            --accent: #38bdf8;
-            --text-primary: #e5e7eb;
-            --text-secondary: #9ca3af;
-            --border: #334155;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, sans-serif;
-            background: linear-gradient(180deg, var(--bg-dark), var(--bg-light));
-            color: var(--text-primary);
-            line-height: 1.6;
-        }
-
-        header {
-            max-width: 1000px;
-            margin: 60px auto 40px;
-            padding: 0 20px;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-        }
-
-        header p {
-            color: var(--text-secondary);
-            max-width: 700px;
-            margin-top: 10px;
-            font-size: 1.05rem;
-        }
-
-        nav {
-            margin-top: 25px;
-        }
-
-        nav a {
-            margin-right: 20px;
-            text-decoration: none;
-            color: var(--accent);
-            font-weight: 500;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        section {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        .section-title {
-            font-size: 1.6rem;
-            margin-bottom: 20px;
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 8px;
-        }
-
-        .card {
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-
-        .card h3 {
-            margin-bottom: 10px;
-            font-size: 1.2rem;
-        }
-
-        .card p {
-            color: var(--text-secondary);
-        }
-
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .skill {
-            border: 1px solid var(--border);
-            padding: 6px 14px;
-            border-radius: 999px;
-            font-size: 0.9rem;
-            background-color: #020617;
-        }
-
-        .contact a {
-            display: block;
-            color: var(--accent);
-            text-decoration: none;
-            margin-bottom: 8px;
-        }
-
-        .contact a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            text-align: center;
-            padding: 30px 20px;
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            border-top: 1px solid var(--border);
-            margin-top: 60px;
-        }
-
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bhuvanesh Bharath | Information Technology Student, Security Learner</title>
+<meta name="description" content="Bhuvanesh Bharath is a B.Tech Information Technology student in Kerala focused on web application security, reconnaissance tooling and Linux.">
+<meta name="theme-color" content="#eef0f3">
+<meta property="og:title" content="Bhuvanesh Bharath">
+<meta property="og:description" content="B.Tech IT student in Kerala learning web application security, OSINT and reconnaissance tooling.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2311151c'/%3E%3Ctext x='16' y='23' font-size='19' font-family='Arial' font-weight='700' text-anchor='middle' fill='%23fff'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Bhuvanesh Bharath","jobTitle":"B.Tech Information Technology student","email":"mailto:sidhubhuvanesh@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Kasaragod","addressRegion":"Kerala","addressCountry":"IN"},"alumniOf":"LBS College of Engineering, Kasaragod","sameAs":["https://github.com/bhuvanesh-bharath/","https://linkedin.com/in/bhuvanesh-bharath/"]}</script>
 </head>
-
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
-<header>
-    <h1>Bhuvanesh Bharath</h1>
-    <p>
-        B.Tech Information Technology student with a focused interest in cybersecurity and web application security.
-        Actively building hands-on experience through bug bounty hunting, CTFs, and practical vulnerability research.
-    </p>
-
-    <nav>
-        <a href="#about">About</a>
-        <a href="#focus">Current Focus</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<header class="bar">
+  <a class="mark" href="#top" aria-label="Bhuvanesh Bharath, back to top">BB</a>
+  <button class="menu" aria-expanded="false" aria-controls="nav">Menu</button>
+  <nav id="nav" aria-label="Primary">
+    <a href="#work">Projects</a>
+    <a href="#training">Training</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
-<section id="about">
-    <h2 class="section-title">About</h2>
-    <div class="card">
-        <p>
-            I am a B.Tech IT student with a strong interest in identifying and understanding real-world security
-            vulnerabilities. My learning approach is hands-on — testing applications, analyzing behavior, and
-            improving my technical depth through continuous practice.
-        </p>
-        <p style="margin-top: 10px;">
-            I am particularly interested in web application security, access control issues, and common exploitation
-            techniques, while steadily improving my Linux and scripting skills.
-        </p>
+<main id="main">
+<section class="hero" id="top">
+  <h1 aria-label="Bhuvanesh Bharath">
+    <span class="line"><span class="load-line" style="--d:.2s">Bhuvanesh</span></span>
+    <span class="line"><span class="load-line" style="--d:.34s">Bharath</span></span>
+  </h1>
+  <div class="hero-foot load" style="--d:.7s">
+    <p class="lede">I like finding out how things work, and how they fail. Right now that means web application security, OSINT and the tooling around reconnaissance.</p>
+    <div class="cta">
+      <a class="btn solid" href="#contact">Get in touch</a>
     </div>
+  </div>
 </section>
 
-<section id="focus">
-    <h2 class="section-title">Current Focus</h2>
+<section class="work" id="work" aria-labelledby="work-h">
+  <div class="wrap">
+    <h2 id="work-h" class="rule">Projects</h2>
+    <p class="intro">Two tools I set up and tested hands-on. Each note covers what I did with it.</p>
 
-    <div class="card">
-        <h3>Bug Bounty & Vulnerability Research</h3>
-        <p>
-            Actively hunting for vulnerabilities such as SQL Injection, XSS, IDOR, and SSRF on real-world web
-            applications. Successfully reported valid security issues, including critical findings, on live systems.
-        </p>
-    </div>
+    <article class="project">
+      <div class="p-meta"><h3>Recon Helper</h3><p>Browser extension for reconnaissance<br>April 2026</p></div>
+      <div class="p-body">
+        <p>A Chrome and Brave extension that gathers recon data from the page you are on. I set it up and tested it against its core features.</p>
+        <ul>
+          <li>Validated URL, domain and IP extraction.</li>
+          <li>Checked external JavaScript file discovery.</li>
+          <li>Tested DNS-over-HTTPS IP resolution.</li>
+          <li>Tried the shortcuts to Shodan, Wayback Machine, WHOIS, crt.sh, SecurityTrails and URLScan, using AI assistance to troubleshoot problems.</li>
+        </ul>
+        <p class="tags">Chrome, Brave, DNS-over-HTTPS, OSINT</p>
+        <a class="link" href="https://github.com/bhuvanesh-bharath/" target="_blank" rel="noopener">View on GitHub</a>
+      </div>
+    </article>
 
-    <div class="card">
-        <h3>Capture The Flag (CTF) Practice</h3>
-        <p>
-            Solving CTF challenges to strengthen fundamentals in web security, Linux, cryptography basics, and
-            problem-solving under constraints.
-        </p>
-    </div>
-
-    <div class="card">
-        <h3>Technical Skill Development</h3>
-        <p>
-            Improving Python for automation and security testing while gaining deeper familiarity with commonly used
-            penetration testing tools and workflows.
-        </p>
-    </div>
+    <article class="project">
+      <div class="p-meta"><h3>VulnVision</h3><p>Network vulnerability assessment platform</p></div>
+      <div class="p-body">
+        <p>An AI-assisted security assessment platform built with Python and Flask. I deployed it in Kali Linux and worked through its workflow.</p>
+        <ul>
+          <li>Installed dependencies and initialised the database.</li>
+          <li>Tested the dashboard and scanning features.</li>
+          <li>Explored how network discovery, service detection and vulnerability assessment fit together.</li>
+        </ul>
+        <p class="tags">Python, Flask, Kali Linux</p>
+        <a class="link" href="https://github.com/bhuvanesh-bharath/" target="_blank" rel="noopener">View on GitHub</a>
+      </div>
+    </article>
+  </div>
 </section>
 
-<section id="skills">
-    <h2 class="section-title">Skills</h2>
-    <div class="card">
-        <div class="skills">
-            <span class="skill">Web Application Security</span>
-            <span class="skill">Penetration Testing</span>
-            <span class="skill">SQL Injection</span>
-            <span class="skill">XSS</span>
-            <span class="skill">IDOR</span>
-            <span class="skill">SSRF</span>
-            <span class="skill">Python</span>
-            <span class="skill">C</span>
-            <span class="skill">Linux</span>
-            <span class="skill">Kali Linux</span>
-            <span class="skill">Burp Suite</span>
-            <span class="skill">Nmap</span>
-            <span class="skill">Wireshark</span>
-            <span class="skill">Metasploit</span>
-        </div>
+<section class="training" id="training" aria-labelledby="tr-h">
+  <div class="wrap">
+    <h2 id="tr-h" class="rule">Training</h2>
+    <ul class="ledger">
+      <li><span>Certified Threat Intelligence &amp; Governance Analyst (CTIGA)</span><em>Red Team Leaders</em><time>2026</time></li>
+      <li><span>Google Cloud Computing Foundations: Infrastructure in Google Cloud</span><em>Google Cloud</em><time>2026</time></li>
+      <li><span>Google Security Operations: Fundamentals</span><em>Google</em><time>2025</time></li>
+      <li><span>Automated Cyber Security Incident Response</span><em>EDUCBA</em><time>2025</time></li>
+      <li><span>Cyber job simulations: Tata, Mastercard, Commonwealth Bank, Deloitte Australia</span><em>Forage</em><time>2025 to 2026</time></li>
+      <li><span>CompTIA Cybersecurity Analyst+: Cloud Computing &amp; Cybersecurity (course)</span><em>Skillsoft</em><time>2024</time></li>
+      <li><span>Advent of Cyber 2024</span><em>TryHackMe</em><time>2024</time></li>
+    </ul>
+
+    <h2 class="rule sub">Activities</h2>
+    <div class="acts">
+      <div><h3>CTF, second place</h3><p>Placed second as part of a team at Illu’mnate 2024, Kerala’s largest skill festival, run by µLearn Foundation.</p></div>
+      <div><h3>Web security session</h3><p>Co-presented a web application security session for the college cyber club, and attended workshops and webinars run by colleges and security communities.</p></div>
     </div>
+  </div>
 </section>
 
-<section id="contact">
-    <h2 class="section-title">Contact</h2>
-    <div class="card contact">
-        <a href="mailto:sidhubhuvanesh@gmail.com">📧 sidhubhuvanesh@gmail.com</a>
-        <a href="https://github.com/bhuvanesh-bharath/" target="_blank">💻 GitHub — bhuvanesh-bharath</a>
-        <a href="https://linkedin.com/in/bhuvanesh-bharath/" target="_blank">🔗 LinkedIn — Bhuvanesh Bharath</a>
+<section class="about" id="about" aria-labelledby="ab-h">
+  <div class="wrap two">
+    <div>
+      <h2 id="ab-h" class="rule">About</h2>
+      <p class="big">I study Information Technology at LBS College of Engineering, Kasaragod (2024 to 2028). Security is where my curiosity landed.</p>
+      <p>I learn by running things: setting up tools, reading what they report, and working out why. Web application testing, OSINT and networking fundamentals are my current focus, and I am looking for chances to apply them on real projects.</p>
+      <p class="muted">Languages: English, Malayalam, basic Hindi.</p>
     </div>
+    <dl class="skills">
+      <div><dt>Languages</dt><dd>Python, C, HTML, CSS</dd></div>
+      <div><dt>Systems and tools</dt><dd>Linux and Kali Linux, Git and GitHub, Burp Suite, Nmap</dd></div>
+      <div><dt>Areas</dt><dd>Networking fundamentals, web application security testing, OSINT, reconnaissance tools</dd></div>
+    </dl>
+  </div>
 </section>
 
-<footer>
-    © <span id="year"></span> Bhuvanesh Bharath. All rights reserved.
-</footer>
+<section class="contact" id="contact" aria-labelledby="ct-h">
+  <div class="wrap">
+    <h2 id="ct-h" class="rule">Contact</h2>
+    <ul class="reach">
+      <li><span>Email</span><a href="mailto:sidhubhuvanesh@gmail.com">sidhubhuvanesh@gmail.com</a></li>
+      <li><span>GitHub</span><a href="https://github.com/bhuvanesh-bharath/" target="_blank" rel="noopener">github.com/bhuvanesh-bharath</a></li>
+      <li><span>LinkedIn</span><a href="https://linkedin.com/in/bhuvanesh-bharath/" target="_blank" rel="noopener">linkedin.com/in/bhuvanesh-bharath</a></li>
+    </ul>
+  </div>
+</section>
+</main>
 
-<script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
+<footer><p>© <span id="year">2026</span> Bhuvanesh Bharath</p></footer>
+<script src="script.js"></script>
 </body>
 </html>
